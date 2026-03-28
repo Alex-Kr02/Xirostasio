@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function PorkCutsPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground pt-32 pb-24 px-6 md:px-12">
+    <div className="min-h-screen bg-[#111111] text-[#f5f5f5] pt-32 pb-24 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
         
         <Link href="/#products" className="text-[var(--color-primary)] hover:underline flex items-center gap-2 mb-12 uppercase tracking-widest text-sm font-semibold">
@@ -18,9 +18,9 @@ export default function PorkCutsPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-serif text-[var(--color-primary)] mb-6">
             Χοιρινή Μπριζόλα <br/>
-            <span className="text-stone-800 dark:text-white text-3xl md:text-5xl">Οι 4 Κορυφαίες Κοπές</span>
+            <span className="text-white text-3xl md:text-5xl font-light">Οι 4 Κορυφαίες Κοπές</span>
           </h1>
-          <p className="text-xl text-stone-600 dark:text-stone-400 font-light">
+          <p className="text-xl text-stone-300 font-light">
             Επιλέξτε την κατάλληλη κοπή για τις δικές σας μαγειρικές δημιουργίες.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function PorkCutsPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1c]/90 to-transparent"></div>
         </div>
 
         <div className="space-y-16">
@@ -46,7 +46,7 @@ export default function PorkCutsPage() {
               <p className="text-stone-300 text-lg leading-relaxed font-light">
                 Είναι <span className="text-white font-medium">πολύ μαλακές</span> λόγω της υψηλής περιεκτικότητάς τους σε λίπος, που φτάνει από 20% έως 40%, ανάλογα με το σιτηρέσιο του ζώου. Γίνονται πολύ νόστιμες ως τηγανιά, γιατί διατηρούν την τρυφερότητά τους. 
               </p>
-              <div className="mt-4 p-4 bg-black/40 rounded-lg text-sm text-stone-400 border-l-2 border-[var(--color-primary)]">
+              <div className="mt-4 p-4 bg-[#1a1a1a] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
                 <strong>Tip μαγειρέματος:</strong> Κατά το ψήσιμο δεν προτείνεται να προσθέσουμε κάποια λιπαρή ουσία. Προτιμάμε να τις ψήνουμε σε μέτρια φωτιά, ώστε να βγάλουν σιγά-σιγά το λίπος τους. Θα πρέπει να έχουν πάχος το λιγότερο 1,5 εκ., ώστε να μείνουν μαλακές στο εσωτερικό.
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function PorkCutsPage() {
             <p className="text-stone-300 text-lg leading-relaxed font-light">
               Θεωρούνται ιδανικές για τηγάνι, είναι μέτρια λιπαρές, με λίπος από <span className="text-white font-medium">10% έως 30%</span>.
             </p>
-            <div className="mt-4 p-4 bg-black/40 rounded-lg text-sm text-stone-400 border-l-2 border-[var(--color-primary)]">
+            <div className="mt-4 p-4 bg-[#1a1a1a] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
               <strong>Tip μαγειρέματος:</strong> Ιδανικό πάχος για να μη στεγνώσουν κατά το μαγείρεμα είναι από 1,5 έως 2 εκ., ώστε να προλάβουν να ψηθούν εξίσου μέσα και έξω και να διατηρήσουν την κατάλληλη υγρασία.
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function PorkCutsPage() {
             <p className="text-stone-300 text-lg leading-relaxed font-light">
               Έχουν <span className="text-white font-medium">ελάχιστο ενδομυϊκό λίπος</span> (λιγότερο από 10%), γι’ αυτό γίνονται, κατά προτίμηση, μαγειρευτές. Επίσης, είναι πολύ νόστιμες ως σνίτσελ.
             </p>
-            <div className="mt-4 p-4 bg-black/40 rounded-lg text-sm text-stone-400 border-l-2 border-[var(--color-primary)]">
+            <div className="mt-4 p-4 bg-[#1a1a1a] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
               <strong>Tip μαγειρέματος:</strong> Στο τηγάνι χρειάζεται προσοχή για να μη στεγνώσουν, οπότε τις προτιμάμε σε πάχος περίπου 2 εκ. Τις «ψήνουμε» σκεπασμένες, για να διατηρούνται οι υδρατμοί κατά το μαγείρεμα.
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function PorkCutsPage() {
             <p className="text-stone-300 text-lg leading-relaxed font-light mt-4">
               Σε αυτό το τμήμα της μπριζόλας το ενδομυϊκό λίπος είναι ελάχιστο και βρίσκεται κυρίως περιμετρικά.
             </p>
-            <div className="mt-4 p-4 bg-black/40 rounded-lg text-sm text-[var(--color-primary)] border-l-2 border-[var(--color-primary)]">
+            <div className="mt-4 p-4 bg-[#111111]/60 rounded-lg text-sm text-[var(--color-primary)] border-l-2 border-[var(--color-primary)]">
               <strong>Tip:</strong> Μπορούμε να ζητήσουμε από τον κρεοπώλη μας να αφαιρέσει το λίπος και να μας κόψει από εκεί μπριζόλες πάχους 1,5 εκ., ιδανικές για όσους προσέχουν, αλλά δεν μπορούν να στερηθούν το κρέας.
             </div>
           </div>

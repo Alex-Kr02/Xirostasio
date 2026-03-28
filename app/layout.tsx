@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,9 +7,9 @@ const inter = Inter({
   subsets: ["latin", "greek"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin", "latin-ext"],
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="el" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased bg-background text-foreground`}
+        className={`${inter.variable} ${lora.variable} antialiased`}
         suppressHydrationWarning
       >
         {children}

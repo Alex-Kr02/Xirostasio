@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-[#111111] text-[#f5f5f5]">
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-50 px-6 py-6 flex justify-between items-center text-white mix-blend-difference">
-        <div className="text-stone-400 font-serif tracking-widest text-xl font-bold uppercase">
+        <div className="text-stone-300 font-serif tracking-widest text-xl font-bold uppercase">
           Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ
         </div>
         <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest">
@@ -18,7 +18,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-[#111111]/70 z-10"></div>
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/hero.jpg')" }}
@@ -31,17 +31,17 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 leading-tight drop-shadow-xl">
             Μ. ΦΙΛΙΠΠΟΥ <br/> <span className="text-[var(--color-primary)]">&</span> Ι. ΤΣΙΡΩΝΗΣ
           </h1>
-          <p className="text-lg md:text-2xl text-stone-200 max-w-2xl font-light mb-10 leading-relaxed shadow-sm">
+          <p className="text-lg md:text-2xl text-stone-300 max-w-2xl font-light mb-10 leading-relaxed shadow-sm">
             Παράδοση, σεβασμός και υψηλή ποιότητα. Από τη φάρμα μας στα Οινόφυτα, απευθείας στο τραπέζι σας. Εγγυόμαστε τα πιο <span className="text-[var(--color-primary)] font-medium">φρέσκα κρέατα</span> στις <span className="text-[var(--color-primary)] font-medium">καλύτερες τιμές</span> της αγοράς.
           </p>
-          <a href="#about" className="px-8 py-4 bg-[var(--color-primary)] text-black hover:bg-white hover:text-black transition-all duration-300 font-medium tracking-wide border border-[var(--color-primary)] hover:border-white">
+          <a href="#about" className="px-8 py-4 bg-[var(--color-primary)] text-black hover:bg-transparent hover:text-white transition-all duration-300 font-medium tracking-wide border border-[var(--color-primary)]">
             Ανακαλύψτε Τη Φάρμα
           </a>
         </div>
       </section>
 
       {/* Feature Highlights */}
-      <section className="bg-zinc-900 border-b border-zinc-800 py-10 px-6">
+      <section className="bg-black border-b border-zinc-800 py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-700">
           <div className="w-full md:w-1/3 pt-4 md:pt-0">
             <h3 className="text-[var(--color-primary)] text-2xl font-serif mb-2">100% Ελληνικό</h3>
@@ -59,27 +59,29 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-        <div className="md:w-1/2">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6">Η Κληρονομιά Μας</h2>
-          <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300 mb-6">
-            Η φάρμα Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ εδρεύει στα Οινόφυτα Βοιωτίας, έναν τόπο με μακρά παράδοση στην κτηνοτροφία. Εδώ και χρόνια, δεσμευόμαστε να προσφέρουμε στους πελάτες μας χοιρινό κρέας ασύγκριτης γεύσης και θρεπτικής αξίας στις καλύτερες τιμές της αγοράς.
-          </p>
-          <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-            Με σεβασμό στα ζώα και στο περιβάλλον, εφαρμόζουμε τις πιο σύγχρονες και αυστηρές πρακτικές εκτροφής, διασφαλίζοντας ότι κάθε κομμάτι κρέατος που φτάνει στο πιάτο σας είναι απλώς τέλειο.
-          </p>
-        </div>
-        <div className="md:w-1/2 relative h-96 w-full">
-           <div className="absolute inset-0 border-2 border-[var(--color-primary)] translate-x-4 translate-y-4"></div>
-           <div 
-             className="absolute inset-0 bg-cover bg-center shadow-2xl"
-             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=2673&auto=format&fit=crop')" }}
-           ></div>
+      <section id="about" className="py-24 px-6 md:px-12 bg-[#757575]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <div className="md:w-1/2">
+            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Η Κληρονομιά Μας</h2>
+            <p className="text-lg leading-relaxed text-stone-100 mb-6 font-medium">
+              Η φάρμα Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ εδρεύει στα Οινόφυτα Βοιωτίας, έναν τόπο με μακρά παράδοση στην κτηνοτροφία. Εδώ και χρόνια, δεσμευόμαστε να προσφέρουμε στους πελάτες μας χοιρινό κρέας ασύγκριτης γεύσης και θρεπτικής αξίας στις καλύτερες τιμές της αγοράς.
+            </p>
+            <p className="text-lg leading-relaxed text-stone-200">
+              Με σεβασμό στα ζώα και στο περιβάλλον, εφαρμόζουμε τις πιο σύγχρονες και αυστηρές πρακτικές εκτροφής, διασφαλίζοντας ότι κάθε κομμάτι κρέατος που φτάνει στο πιάτο σας είναι απλώς τέλειο.
+            </p>
+          </div>
+          <div className="md:w-1/2 relative h-96 w-full">
+             <div className="absolute inset-0 border-2 border-[var(--color-primary)] translate-x-4 translate-y-4"></div>
+             <div 
+               className="absolute inset-0 bg-cover bg-center shadow-2xl"
+               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?q=80&w=2673&auto=format&fit=crop')" }}
+             ></div>
+          </div>
         </div>
       </section>
 
       {/* Premium Products Section */}
-      <section id="products" className="py-24 px-6 md:px-12 bg-zinc-950">
+      <section id="products" className="py-24 px-6 md:px-12 bg-[#111111]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-6xl md:text-8xl font-serif text-[var(--color-primary)]">Η Συλλογή Μας</h2>
@@ -89,7 +91,7 @@ export default function Home() {
             {/* Product 1 - Linked to detail page */}
             <Link href="/cuts" className="block group cursor-pointer">
               <div className="relative h-80 overflow-hidden mb-6 rounded-xl border border-zinc-800 group-hover:border-[var(--color-primary)] transition-colors duration-300">
-                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                 <div className="absolute inset-0 bg-[#7F7F7F]/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                  <div 
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                   style={{ backgroundImage: "url('/pork-cuts.jpg')" }}
@@ -102,7 +104,7 @@ export default function Home() {
             {/* Product 2 - Linked to detail page */}
             <Link href="/souvlakia" className="block group cursor-pointer">
               <div className="relative h-80 overflow-hidden mb-6 rounded-xl border border-zinc-800 group-hover:border-[var(--color-primary)] transition-colors duration-300">
-                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                 <div className="absolute inset-0 bg-[#7F7F7F]/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                  <div 
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                   style={{ backgroundImage: "url('/souvlakia.jpg')" }}
@@ -115,7 +117,7 @@ export default function Home() {
             {/* Product 3 - Linked to detail page */}
             <Link href="/loukanika" className="block group cursor-pointer">
               <div className="relative h-80 overflow-hidden mb-6 rounded-xl border border-zinc-800 group-hover:border-[var(--color-primary)] transition-colors duration-300">
-                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                 <div className="absolute inset-0 bg-[#7F7F7F]/40 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                  <div 
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                   style={{ backgroundImage: "url('/loukanika.jpg')" }}
@@ -130,19 +132,19 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 md:px-12 text-center bg-black border-t border-zinc-900">
+      <section id="contact" className="py-24 px-6 md:px-12 text-center bg-[#757575] border-t border-zinc-800">
         <h2 className="text-3xl md:text-5xl font-serif text-white mb-8">Επικοινωνήστε Μαζί Μας</h2>
-        <p className="text-lg text-stone-400 max-w-2xl mx-auto mb-12">
+        <p className="text-lg text-stone-200 max-w-2xl mx-auto mb-12">
           Ενδιαφέρεστε για χονδρική πώληση ή θέλετε να μάθετε περισσότερα για τα προϊόντα μας; Η ομάδα μας είναι στη διάθεσή σας.
         </p>
         
         <div className="flex justify-center mb-16">
-          <a href="mailto:info@filippou-tsironis.gr" className="px-10 py-4 bg-white text-black font-semibold hover:bg-[var(--color-primary)] transition-colors tracking-wide">
+          <a href="mailto:info@filippou-tsironis.gr" className="px-10 py-4 bg-[#2a2a2a] text-white font-semibold hover:bg-[var(--color-primary)] hover:text-black transition-colors tracking-wide border border-zinc-700 hover:border-transparent">
             Αποστολή Μηνύματος
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-stone-400">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-stone-300">
            <div>
               <h4 className="text-white font-serif text-xl mb-2">Τοποθεσία</h4>
               <p className="mb-4">Οινόφυτα Βοιωτίας, Τ.Κ. 32011</p>
@@ -175,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 text-center text-sm text-stone-600 bg-black border-t border-zinc-900">
+      <footer className="py-8 text-center text-sm text-stone-500 bg-[#111111] border-t border-zinc-900">
         <p>&copy; 2026 Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ. Με επιφύλαξη παντός δικαιώματος.</p>
       </footer>
     </div>
