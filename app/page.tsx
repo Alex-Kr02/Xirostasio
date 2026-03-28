@@ -97,7 +97,7 @@ export default function Home() {
                   style={{ backgroundImage: "url('/pork-cuts.jpg')" }}
                  ></div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-2 group-hover:text-[var(--color-primary)] transition-colors inline-block">Χοιρινή Μπριζόλα</h3>
+              <h3 className="text-2xl font-serif text-white mb-2 group-hover:text-[var(--color-primary)] transition-colors inline-block">Χοιρινές Μπριζόλες</h3>
               <p className="text-stone-400 mb-3">Εκλεκτή μπριζόλα με ιδανική αναλογία μαρμαρώματος για απόλυτη τρυφερότητα.</p>
               <span className="text-[var(--color-primary)] text-sm tracking-wider uppercase font-semibold group-hover:underline">Δείτε τις Κοπές &rarr;</span>
             </Link>

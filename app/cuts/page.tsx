@@ -17,7 +17,7 @@ export default function PorkCutsPage() {
         
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-serif text-[var(--color-primary)] mb-6">
-            Χοιρινή Μπριζόλα <br/>
+            Χοιρινές Μπριζόλες <br/>
             <span className="text-white text-3xl md:text-5xl font-light">Οι 4 Κορυφαίες Κοπές</span>
           </h1>
           <p className="text-xl text-stone-300 font-light">
