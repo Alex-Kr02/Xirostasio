@@ -38,7 +38,7 @@ export default function PorkCutsPage() {
 
         <div className="space-y-16">
           {/* Cut 1 */}
-          <div className="bg-zinc-900/50 p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors flex flex-col md:flex-row gap-10 items-start">
+          <div className="bg-[#1c1c1c] p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors flex flex-col md:flex-row gap-10 items-start">
             <div className="md:w-2/3">
               <h2 className="text-3xl font-serif text-white mb-4 flex items-center gap-4">
                 <span className="text-[var(--color-primary)]">1.</span> Μπριζόλες Λαιμού
@@ -46,7 +46,7 @@ export default function PorkCutsPage() {
               <p className="text-stone-300 text-lg leading-relaxed font-light">
                 Είναι <span className="text-white font-medium">πολύ μαλακές</span> λόγω της υψηλής περιεκτικότητάς τους σε λίπος, που φτάνει από 20% έως 40%, ανάλογα με το σιτηρέσιο του ζώου. Γίνονται πολύ νόστιμες ως τηγανιά, γιατί διατηρούν την τρυφερότητά τους. 
               </p>
-              <div className="mt-4 p-4 bg-[#1a1a1a] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
+              <div className="mt-4 p-4 bg-[#111111] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
                 <strong>Tip μαγειρέματος:</strong> Κατά το ψήσιμο δεν προτείνεται να προσθέσουμε κάποια λιπαρή ουσία. Προτιμάμε να τις ψήνουμε σε μέτρια φωτιά, ώστε να βγάλουν σιγά-σιγά το λίπος τους. Θα πρέπει να έχουν πάχος το λιγότερο 1,5 εκ., ώστε να μείνουν μαλακές στο εσωτερικό.
               </div>
             </div>
@@ -61,33 +61,33 @@ export default function PorkCutsPage() {
           </div>
 
           {/* Cut 2 */}
-          <div className="bg-zinc-900/50 p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+          <div className="bg-[#1c1c1c] p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
             <h2 className="text-3xl font-serif text-white mb-4 flex items-center gap-4">
               <span className="text-[var(--color-primary)]">2.</span> Σπαλομπριζόλες & Μπριζόλες από πλευρά
             </h2>
             <p className="text-stone-300 text-lg leading-relaxed font-light">
               Θεωρούνται ιδανικές για τηγάνι, είναι μέτρια λιπαρές, με λίπος από <span className="text-white font-medium">10% έως 30%</span>.
             </p>
-            <div className="mt-4 p-4 bg-[#1a1a1a] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
+            <div className="mt-4 p-4 bg-[#111111] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
               <strong>Tip μαγειρέματος:</strong> Ιδανικό πάχος για να μη στεγνώσουν κατά το μαγείρεμα είναι από 1,5 έως 2 εκ., ώστε να προλάβουν να ψηθούν εξίσου μέσα και έξω και να διατηρήσουν την κατάλληλη υγρασία.
             </div>
           </div>
 
           {/* Cut 3 */}
-          <div className="bg-zinc-900/50 p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
+          <div className="bg-[#1c1c1c] p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-zinc-700 transition-colors">
             <h2 className="text-3xl font-serif text-white mb-4 flex items-center gap-4">
               <span className="text-[var(--color-primary)]">3.</span> Μπριζόλες Κόντρα
             </h2>
             <p className="text-stone-300 text-lg leading-relaxed font-light">
               Έχουν <span className="text-white font-medium">ελάχιστο ενδομυϊκό λίπος</span> (λιγότερο από 10%), γι’ αυτό γίνονται, κατά προτίμηση, μαγειρευτές. Επίσης, είναι πολύ νόστιμες ως σνίτσελ.
             </p>
-            <div className="mt-4 p-4 bg-[#1a1a1a] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
+            <div className="mt-4 p-4 bg-[#111111] rounded-lg text-sm text-stone-300 border-l-2 border-[var(--color-primary)]">
               <strong>Tip μαγειρέματος:</strong> Στο τηγάνι χρειάζεται προσοχή για να μη στεγνώσουν, οπότε τις προτιμάμε σε πάχος περίπου 2 εκ. Τις «ψήνουμε» σκεπασμένες, για να διατηρούνται οι υδρατμοί κατά το μαγείρεμα.
             </div>
           </div>
 
           {/* Cut 4 */}
-          <div className="bg-zinc-900/50 p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-[var(--color-primary)] transition-colors relative overflow-hidden">
+          <div className="bg-[#1c1c1c] p-8 md:p-10 rounded-2xl border border-zinc-800 hover:border-[var(--color-primary)] transition-colors relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-[var(--color-primary)] text-black text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-bl-lg">Ιδανικο για Διαιτα</div>
             <h2 className="text-3xl font-serif text-white mb-4 flex items-center gap-4">
               <span className="text-[var(--color-primary)]">4.</span> Μπριζόλες για Δίαιτα (Μάτι)
@@ -98,7 +98,7 @@ export default function PorkCutsPage() {
             <p className="text-stone-300 text-lg leading-relaxed font-light mt-4">
               Σε αυτό το τμήμα της μπριζόλας το ενδομυϊκό λίπος είναι ελάχιστο και βρίσκεται κυρίως περιμετρικά.
             </p>
-            <div className="mt-4 p-4 bg-[#111111]/60 rounded-lg text-sm text-[var(--color-primary)] border-l-2 border-[var(--color-primary)]">
+            <div className="mt-4 p-4 bg-[#111111] rounded-lg text-sm text-[var(--color-primary)] border-l-2 border-[var(--color-primary)]">
               <strong>Tip:</strong> Μπορούμε να ζητήσουμε από τον κρεοπώλη μας να αφαιρέσει το λίπος και να μας κόψει από εκεί μπριζόλες πάχους 1,5 εκ., ιδανικές για όσους προσέχουν, αλλά δεν μπορούν να στερηθούν το κρέας.
             </div>
           </div>
