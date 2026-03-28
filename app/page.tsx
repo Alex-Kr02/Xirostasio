@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 md:px-12 bg-[#757575]">
+      <section id="about" className="py-24 px-6 md:px-12 bg-[#161616]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="md:w-1/2">
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Η Κληρονομιά Μας</h2>
@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* Premium Products Section */}
-      <section id="products" className="py-24 px-6 md:px-12 bg-[#111111]">
+      <section id="products" className="py-24 px-6 md:px-12 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-6xl md:text-8xl font-serif text-[var(--color-primary)]">Η Συλλογή Μας</h2>
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 md:px-12 text-center bg-[#757575] border-t border-zinc-800">
+      <section id="contact" className="py-24 px-6 md:px-12 text-center bg-black border-t border-zinc-900">
         <h2 className="text-3xl md:text-5xl font-serif text-white mb-8">Επικοινωνήστε Μαζί Μας</h2>
         <p className="text-lg text-stone-200 max-w-2xl mx-auto mb-12">
           Ενδιαφέρεστε για χονδρική πώληση ή θέλετε να μάθετε περισσότερα για τα προϊόντα μας; Η ομάδα μας είναι στη διάθεσή σας.
