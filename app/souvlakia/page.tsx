@@ -1,14 +1,48 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Σουβλάκια | Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ",
-  description: "Αυθεντικά καλαμάκια (σουβλάκια) κομμένα πλατιά και τετράγωνα για το τέλειο ψήσιμο.",
+  description: "Αυθεντικά χοιρινά καλαμάκια (σουβλάκια) κομμένα πλατιά και τετράγωνα για το τέλειο ψήσιμο. 100% Ελληνικό Κρέας.",
+  openGraph: {
+    title: "Σουβλάκια | Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ",
+    description: "Αυθεντικά χοιρινά καλαμάκια (σουβλάκια) κομμένα πλατιά και τετράγωνα για το τέλειο ψήσιμο.",
+    url: "https://filippou-tsironis.gr/souvlakia",
+    siteName: "Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ",
+    images: [
+      {
+        url: "/souvlakia.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Σουβλάκια - Πλατιά, τετράγωνα",
+      },
+    ],
+    locale: "el_GR",
+    type: "article",
+  },
 };
 
 export default function SouvlakiaPage() {
+  const structuredData = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Χοιρινά Σουβλάκια",
+    "image": "https://filippou-tsironis.gr/souvlakia.jpg",
+    "description": "Αυθεντικά χοιρινά καλαμάκια (σουβλάκια) κομμένα πλατιά και τετράγωνα για το τέλειο ψήσιμο. Ιδανικά για χονδρική πώληση.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#111111] text-[#f5f5f5] pt-32 pb-24 px-6 md:px-12 flex items-center justify-center">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="max-w-4xl mx-auto w-full">
         
         <Link href="/#products" className="text-[var(--color-primary)] hover:underline flex items-center gap-2 mb-12 uppercase tracking-widest text-sm font-semibold">

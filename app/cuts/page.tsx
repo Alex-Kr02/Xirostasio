@@ -1,14 +1,48 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Premium Κοπές Χοιρινής Μπριζόλας | Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ",
   description: "Ανακαλύψτε τις 4 premium κοπές χοιρινής μπριζόλας της φάρμας μας στα Οινόφυτα: Μπριζόλες λαιμού, σπαλομπριζόλες, μπριζόλες κόντρα και μπριζόλες για δίαιτα.",
+  openGraph: {
+    title: "Premium Κοπές Χοιρινής Μπριζόλας | Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ",
+    description: "Ανακαλύψτε τις 4 premium κοπές χοιρινής μπριζόλας. Μπριζόλες λαιμού, σπαλομπριζόλες, κόντρα και δίαιτας. 100% Ελληνικό Κρέας.",
+    url: "https://filippou-tsironis.gr/cuts",
+    siteName: "Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ",
+    images: [
+      {
+        url: "/pork-cuts.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Κοπές Χοιρινού Κρέατος",
+      },
+    ],
+    locale: "el_GR",
+    type: "article",
+  },
 };
 
 export default function PorkCutsPage() {
+  const structuredData = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Χοιρινές Μπριζόλες - 4 Κοπές",
+    "image": "https://filippou-tsironis.gr/pork-cuts.jpg",
+    "description": "4 premium κοπές χοιρινής μπριζόλας: Μπριζόλες λαιμού, σπαλομπριζόλες, μπριζόλες κόντρα και μπριζόλες για δίαιτα (Μάτι). 100% Ελληνικό Κρέας.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Μ. ΦΙΛΙΠΠΟΥ - Ι. ΤΣΙΡΩΝΗΣ ΕΠΕ"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#111111] text-[#f5f5f5] pt-32 pb-24 px-6 md:px-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="max-w-4xl mx-auto">
         
         <Link href="/#products" className="text-[var(--color-primary)] hover:underline flex items-center gap-2 mb-12 uppercase tracking-widest text-sm font-semibold">
