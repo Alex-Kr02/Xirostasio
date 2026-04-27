@@ -27,8 +27,9 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ data });
-  } catch (error: any) {
-    console.error("Internal Error:", error);
-    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error("Internal Error:", err);
+    return NextResponse.json({ error: err.message || 'Internal Server Error' }, { status: 500 });
   }
 }

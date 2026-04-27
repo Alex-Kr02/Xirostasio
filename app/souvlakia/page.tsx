@@ -52,7 +52,7 @@ export default function SouvlakiaPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-serif text-[var(--color-primary)] mb-6">Σουβλάκια</h1>
           <p className="text-2xl text-white font-serif italic tracking-wide">
-            "Πλατιά, τετράγωνα"
+            &quot;Πλατιά, τετράγωνα&quot;
           </p>
         </div>
 
