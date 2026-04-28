@@ -243,11 +243,11 @@ export default function Home() {
                   <span className="text-[var(--color-primary)] transition-transform duration-300 group-open:rotate-45 text-3xl font-light leading-none">+</span>
                 </summary>
                 <div className="px-6 md:px-8 pb-8 text-stone-300 leading-relaxed font-light">
-                  {faq.acceptedAnswer.text.split("Οινόφυτα Βοιωτίας").map((part, i, arr) => (
-                    <span key={i}>
-                      {part}
-                      {i < arr.length - 1 && (
+                  {faq.acceptedAnswer.text.split(/(Οινόφυτα Βοιωτίας|\+30 2262 031125|ftpigstore@gmail\.com|φόρμα επικοινωνίας)/g).map((part, i) => {
+                    if (part === "Οινόφυτα Βοιωτίας") {
+                      return (
                         <a 
+                          key={i}
                           href="https://www.google.com/maps/dir//M+FILIPPOU+-+I+TSIRONIS+Ltd.,+Inofita+320+11/@38.0374246,23.8452736,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14a10efaa51b775d:0xcd8166ec1a04f827!2m2!1d23.6318076!2d38.2847185"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -255,9 +255,35 @@ export default function Home() {
                         >
                           Οινόφυτα Βοιωτίας
                         </a>
-                      )}
-                    </span>
-                  ))}
+                      );
+                    }
+                    if (part === "+30 2262 031125") {
+                      return (
+                        <a key={i} href="tel:+302262031125" className="text-[var(--color-primary)] hover:underline font-medium">
+                          +30 2262 031125
+                        </a>
+                      );
+                    }
+                    if (part === "ftpigstore@gmail.com") {
+                      return (
+                        <a key={i} href="mailto:ftpigstore@gmail.com" className="text-[var(--color-primary)] hover:underline font-medium">
+                          ftpigstore@gmail.com
+                        </a>
+                      );
+                    }
+                    if (part === "φόρμα επικοινωνίας") {
+                      return (
+                        <button 
+                          key={i} 
+                          onClick={() => setIsModalOpen(true)}
+                          className="text-[var(--color-primary)] hover:underline font-medium cursor-pointer bg-transparent border-none p-0"
+                        >
+                          φόρμα επικοινωνίας
+                        </button>
+                      );
+                    }
+                    return <span key={i}>{part}</span>;
+                  })}
                 </div>
               </details>
             ))}
