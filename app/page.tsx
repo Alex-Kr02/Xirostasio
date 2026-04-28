@@ -11,6 +11,7 @@ export default function Home() {
   const [formData, setFormData] = useState({
     businessName: "",
     afm: "",
+    email: "",
     phone: "",
     address: "",
     quantity: ""
@@ -112,6 +113,7 @@ export default function Home() {
     setFormData({
       businessName: "",
       afm: "",
+      email: "",
       phone: "",
       address: "",
       quantity: ""
@@ -366,6 +368,16 @@ export default function Home() {
                         className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
                         value={formData.afm}
                         onChange={(e) => setFormData({...formData, afm: e.target.value})}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Email Επικοινωνίας</label>
+                      <input 
+                        required
+                        type="email" 
+                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
                       />
                     </div>
                     <div>

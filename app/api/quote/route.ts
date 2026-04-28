@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
   try {
-    const { businessName, afm, phone, address, quantity } = await req.json();
+    const { businessName, afm, email, phone, address, quantity } = await req.json();
 
     const { data, error } = await resend.emails.send({
       from: 'Xirostasio <onboarding@resend.dev>',
@@ -14,6 +14,7 @@ export async function POST(req: Request) {
         <h1>Νέο Αίτημα Προσφοράς</h1>
         <p><strong>Όνομα Επιχείρησης:</strong> ${businessName}</p>
         <p><strong>ΑΦΜ:</strong> ${afm}</p>
+        <p><strong>Email Πελάτη:</strong> ${email}</p>
         <p><strong>Τηλέφωνο:</strong> ${phone}</p>
         <p><strong>Διεύθυνση:</strong> ${address}</p>
         <p><strong>Εκτιμώμενη Ποσότητα / Μήνα:</strong> ${quantity}</p>
