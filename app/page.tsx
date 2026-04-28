@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -335,109 +337,111 @@ export default function Home() {
       {/* Quote Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-300">
-          <div className="relative w-full max-w-lg bg-[#1a1a1a] border border-zinc-800 p-8 md:p-10 shadow-2xl rounded-2xl overflow-hidden">
+          <div className="relative w-full max-w-lg bg-[#1a1a1a] border border-zinc-800 p-6 md:p-10 shadow-2xl rounded-2xl overflow-hidden max-h-[95vh] flex flex-col">
             <button 
               onClick={closeModal}
-              className="absolute top-4 right-4 text-stone-500 hover:text-white transition-colors text-2xl"
+              className="absolute top-4 right-4 text-stone-500 hover:text-white transition-colors text-2xl z-10"
             >
               ✕
             </button>
 
-            {!isSubmitted ? (
-              <>
-                <h3 className="text-3xl font-serif text-white mb-2 text-center">Αίτημα Προσφοράς</h3>
-                <p className="text-stone-400 text-center mb-8 font-light">Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας.</p>
-                
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Όνομα Επιχείρησης</label>
-                    <input 
-                      required
-                      type="text" 
-                      className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
-                      value={formData.businessName}
-                      onChange={(e) => setFormData({...formData, businessName: e.target.value})}
-                    />
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="overflow-y-auto pr-2 custom-scrollbar">
+              {!isSubmitted ? (
+                <>
+                  <h3 className="text-2xl md:text-3xl font-serif text-white mb-2 text-center">Αίτημα Προσφοράς</h3>
+                  <p className="text-stone-400 text-center mb-6 md:mb-8 font-light text-sm md:text-base">Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας.</p>
+                  
+                  <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                     <div>
-                      <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">ΑΦΜ</label>
+                      <label className="block text-[10px] md:text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Όνομα Επιχείρησης</label>
                       <input 
                         required
                         type="text" 
-                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
-                        value={formData.afm}
-                        onChange={(e) => setFormData({...formData, afm: e.target.value})}
+                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors text-sm md:text-base"
+                        value={formData.businessName}
+                        onChange={(e) => setFormData({...formData, businessName: e.target.value})}
                       />
                     </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                      <div>
+                        <label className="block text-[10px] md:text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">ΑΦΜ</label>
+                        <input 
+                          required
+                          type="text" 
+                          className="w-full bg-black/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors text-sm md:text-base"
+                          value={formData.afm}
+                          onChange={(e) => setFormData({...formData, afm: e.target.value})}
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[10px] md:text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Τηλέφωνο</label>
+                        <input 
+                          required
+                          type="tel" 
+                          className="w-full bg-black/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors text-sm md:text-base"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        />
+                      </div>
+                    </div>
                     <div>
-                      <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Email Επικοινωνίας</label>
+                      <label className="block text-[10px] md:text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Email</label>
                       <input 
                         required
                         type="email" 
-                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
+                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors text-sm md:text-base"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
                       />
                     </div>
                     <div>
-                      <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Τηλέφωνο</label>
+                      <label className="block text-[10px] md:text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Διεύθυνση</label>
                       <input 
                         required
-                        type="tel" 
-                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                        type="text" 
+                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors text-sm md:text-base"
+                        value={formData.address}
+                        onChange={(e) => setFormData({...formData, address: e.target.value})}
                       />
                     </div>
+                    <div>
+                      <label className="block text-[10px] md:text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Εκτιμώμενη Ποσότητα / Μήνα</label>
+                      <input 
+                        required
+                        type="text" 
+                        placeholder="π.χ. 500kg"
+                        className="w-full bg-black/50 border border-zinc-800 rounded-lg p-3 md:p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors text-sm md:text-base"
+                        value={formData.quantity}
+                        onChange={(e) => setFormData({...formData, quantity: e.target.value})}
+                      />
+                    </div>
+                    <button 
+                      type="submit"
+                      disabled={isPending}
+                      className="w-full py-4 md:py-5 bg-[var(--color-primary)] text-black font-bold uppercase tracking-widest rounded-lg hover:bg-white transition-all duration-300 mt-2 md:mt-4 shadow-lg shadow-[var(--color-primary)]/10 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base"
+                    >
+                      {isPending ? "Αποστολή..." : "Υποβολή Αιτήματος"}
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <div className="text-center py-6 md:py-10 animate-in zoom-in duration-500">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[var(--color-primary)]/10 border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8">
+                    <span className="text-3xl md:text-4xl text-[var(--color-primary)]">✓</span>
                   </div>
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Διεύθυνση</label>
-                    <input 
-                      required
-                      type="text" 
-                      className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
-                      value={formData.address}
-                      onChange={(e) => setFormData({...formData, address: e.target.value})}
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs uppercase tracking-widest text-[var(--color-primary)] mb-2 font-bold">Εκτιμώμενη Ποσότητα / Μήνα</label>
-                    <input 
-                      required
-                      type="text" 
-                      placeholder="π.χ. 500kg"
-                      className="w-full bg-black/50 border border-zinc-800 rounded-lg p-4 text-white focus:border-[var(--color-primary)] focus:outline-none transition-colors"
-                      value={formData.quantity}
-                      onChange={(e) => setFormData({...formData, quantity: e.target.value})}
-                    />
-                  </div>
+                  <h3 className="text-2xl md:text-3xl font-serif text-white mb-4">Ευχαριστούμε για την προτίμησή σας!</h3>
+                  <p className="text-stone-300 text-base md:text-lg font-light leading-relaxed mb-6 md:mb-8">
+                    Η ομάδα μας θα έρθει σύντομα σε επικοινωνία μαζί σας.
+                  </p>
                   <button 
-                    type="submit"
-                    disabled={isPending}
-                    className="w-full py-5 bg-[var(--color-primary)] text-black font-bold uppercase tracking-widest rounded-lg hover:bg-white transition-all duration-300 mt-4 shadow-lg shadow-[var(--color-primary)]/10 disabled:opacity-50 disabled:cursor-not-allowed"
+                    onClick={closeModal}
+                    className="px-8 py-3 border border-zinc-700 text-stone-400 hover:text-white hover:border-white transition-all rounded-lg text-sm md:text-base"
                   >
-                    {isPending ? "Αποστολή..." : "Υποβολή Αιτήματος"}
+                    Κλείσιμο
                   </button>
-                </form>
-              </>
-            ) : (
-              <div className="text-center py-10 animate-in zoom-in duration-500">
-                <div className="w-20 h-20 bg-[var(--color-primary)]/10 border-2 border-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-8">
-                  <span className="text-4xl text-[var(--color-primary)]">✓</span>
                 </div>
-                <h3 className="text-3xl font-serif text-white mb-4">Ευχαριστούμε για την προτίμησή σας!</h3>
-                <p className="text-stone-300 text-lg font-light leading-relaxed mb-8">
-                  Η ομάδα μας θα έρθει σύντομα σε επικοινωνία μαζί σας.
-                </p>
-                <button 
-                  onClick={closeModal}
-                  className="px-8 py-3 border border-zinc-700 text-stone-400 hover:text-white hover:border-white transition-all rounded-lg"
-                >
-                  Κλείσιμο
-                </button>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       )}
